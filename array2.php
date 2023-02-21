@@ -1,5 +1,9 @@
 <?php
-$mahasiswa = ["Ari Setiawan", "22510010", "Sistem Informasi", "ari22510010@stimata.ac.id"];
+$mahasiswa =[ 
+["Ari Setiawan", "22510010", "Sistem Informasi", "ari22510010@stimata.ac.id"],
+["Setiawan", "510010", "SI", "setiawan510010@stimata.ac.id"],
+["Doni", "31510010", "TI", "doni31510010@stimata.ac.id"]
+];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,11 +15,12 @@ $mahasiswa = ["Ari Setiawan", "22510010", "Sistem Informasi", "ari22510010@stima
 </head>
 <body>
     <h1> Daftar Mahasiswa</h1>
+    <?php foreach ($mahasiswa as $mhs): ?>
     <ul>
-      <li><?php echo $mahasiswa[0]; ?></li>
-      <li><?php echo $mahasiswa[1]; ?></li>
-      <li><?php echo $mahasiswa[2]; ?></li>
-      <li><?php echo $mahasiswa[3]; ?></li>
+        <?php foreach ($mhs as $m) : ?>
+            <li><?php echo $m; ?></li>
+        <?php endforeach;?>
     </ul>
+    <?php endforeach ;?>
 </body>
 </html>
